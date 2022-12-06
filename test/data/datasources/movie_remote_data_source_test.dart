@@ -9,8 +9,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:mockito/mockito.dart';
 
+import '../../helpers/movie_test_helper.mocks.dart';
 import '../../json_reader.dart';
-import '../../helpers/test_helper.mocks.dart';
 
 void main() {
   const API_KEY = 'api_key=2174d146bb9c0eab47529b2e77d6b526';
@@ -26,7 +26,7 @@ void main() {
 
   group('get Now Playing Movies', () {
     final tMovieList = MovieResponse.fromJson(
-            json.decode(readJson('dummy_data/now_playing.json')))
+            json.decode(readJson('/dummy_data/now_playing.json')))
         .movieList;
 
     test('should return list of Movie Model when the response code is 200',

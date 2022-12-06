@@ -3,8 +3,8 @@ import 'package:ditonton/data/datasources/movie/movie_local_data_source.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
-import '../../dummy_data/dummy_objects.dart';
-import '../../helpers/test_helper.mocks.dart';
+import '../../dummy_data/movie/movie_dummy_objects.dart';
+import '../../helpers/movie_test_helper.mocks.dart';
 
 void main() {
   late MovieLocalDataSourceImpl dataSource;
@@ -19,7 +19,7 @@ void main() {
     test('should return success message when insert to database is success',
         () async {
       // arrange
-      when(mockDatabaseHelper.insertWatchlist(testMovieTable))
+      when(mockDatabaseHelper.insertMovieWatchlist(testMovieTable))
           .thenAnswer((_) async => 1);
       // act
       final result = await dataSource.insertMovieWatchlist(testMovieTable);
@@ -30,7 +30,7 @@ void main() {
     test('should throw DatabaseException when insert to database is failed',
         () async {
       // arrange
-      when(mockDatabaseHelper.insertWatchlist(testMovieTable))
+      when(mockDatabaseHelper.insertMovieWatchlist(testMovieTable))
           .thenThrow(Exception());
       // act
       final call = dataSource.insertMovieWatchlist(testMovieTable);
@@ -43,7 +43,7 @@ void main() {
     test('should return success message when remove from database is success',
         () async {
       // arrange
-      when(mockDatabaseHelper.removeWatchlist(testMovieTable))
+      when(mockDatabaseHelper.removeMovieWatchlist(testMovieTable))
           .thenAnswer((_) async => 1);
       // act
       final result = await dataSource.removeMovieWatchlist(testMovieTable);
@@ -54,7 +54,7 @@ void main() {
     test('should throw DatabaseException when remove from database is failed',
         () async {
       // arrange
-      when(mockDatabaseHelper.removeWatchlist(testMovieTable))
+      when(mockDatabaseHelper.removeMovieWatchlist(testMovieTable))
           .thenThrow(Exception());
       // act
       final call = dataSource.removeMovieWatchlist(testMovieTable);

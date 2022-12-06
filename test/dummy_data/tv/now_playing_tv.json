@@ -1,0 +1,26 @@
+{
+    "page": 1,
+    "results": [
+        {
+            "backdrop_path": "/cl8NLaoztP877hTSYSy6YIUkChF.jpg",
+            "first_air_date": "2022-09-26",
+            "genre_ids": [
+                10764
+            ],
+            "id": 210855,
+            "name": "Now what",
+            "origin_country": [
+                "BE"
+            ],
+            "original_language": "nl",
+            "original_name": "Now what",
+            "overview": "7 young people co-house in Antwerp. They are all at the beginning of their adult life and have to decide what that should look like.",
+            "popularity": 1358.348,
+            "poster_path": "/89kiLK0S7Rbfjorvhm0vxTAgAH3.jpg",
+            "vote_average": 5.3,
+            "vote_count": 4
+        }
+    ],
+    "total_pages": 53,
+    "total_results": 1047
+}

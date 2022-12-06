@@ -1,0 +1,156 @@
+{
+    "adult": false,
+    "backdrop_path": "/5DUMPBSnHOZsbBv81GFXZXvDpo6.jpg",
+    "created_by": [
+        {
+            "id": 2887554,
+            "credit_id": "638d20e47d5db5101e5637fe",
+            "name": "Tatsuki Fujimoto",
+            "gender": 2,
+            "profile_path": null
+        }
+    ],
+    "episode_run_time": [
+        24
+    ],
+    "first_air_date": "2022-10-12",
+    "genres": [
+        {
+            "id": 16,
+            "name": "Animation"
+        },
+        {
+            "id": 10759,
+            "name": "Action & Adventure"
+        },
+        {
+            "id": 10765,
+            "name": "Sci-Fi & Fantasy"
+        },
+        {
+            "id": 35,
+            "name": "Comedy"
+        }
+    ],
+    "homepage": "https://chainsawman.dog/",
+    "id": 114410,
+    "in_production": true,
+    "languages": [
+        "ja"
+    ],
+    "last_air_date": "2022-11-30",
+    "last_episode_to_air": {
+        "air_date": "2022-11-30",
+        "episode_number": 8,
+        "id": 3963648,
+        "name": "GUNFIRE",
+        "overview": "Denji experiences his first, yet devastating, kiss.\n\nAn intoxicated Denji is taken to Himeno's house, where she starts seducing him. Feeling torn between Makima, whom he admires, and Himeno, who is standing in front of him, he decides to fall into temptation. However, Denji then finds something in his pocket: The Chupa Chups lollipop that Makima gave him.",
+        "production_code": "",
+        "runtime": 24,
+        "season_number": 1,
+        "show_id": 114410,
+        "still_path": "/oMRTKYMYHQBlFVYvjNuUJWzLYz5.jpg",
+        "vote_average": 9.7,
+        "vote_count": 3
+    },
+    "name": "Chainsaw Man",
+    "next_episode_to_air": {
+        "air_date": "2022-12-07",
+        "episode_number": 9,
+        "id": 3963649,
+        "name": "Episode 9",
+        "overview": "",
+        "production_code": "",
+        "runtime": 24,
+        "season_number": 1,
+        "show_id": 114410,
+        "still_path": null,
+        "vote_average": 0.0,
+        "vote_count": 0
+    },
+    "networks": [
+        {
+            "id": 98,
+            "name": "TV Tokyo",
+            "logo_path": "/kGRavMqgyx4p2X4C96bjRCj50oI.png",
+            "origin_country": "JP"
+        },
+        {
+            "id": 252,
+            "name": "TV Aichi",
+            "logo_path": "/zFZ5KCuvx7K0vP9XgGcidfXjuUd.png",
+            "origin_country": "JP"
+        },
+        {
+            "id": 822,
+            "name": "TVQ",
+            "logo_path": "/fGdBR7lxjrXsBlwZF7B1UNpG5ff.png",
+            "origin_country": "JP"
+        },
+        {
+            "id": 824,
+            "name": "TV Osaka",
+            "logo_path": "/6foQmoPac7WCDnDuDbuCZklmDuA.png",
+            "origin_country": "JP"
+        },
+        {
+            "id": 938,
+            "name": "TVh",
+            "logo_path": "/vEUZNYjuSn0iTQyZ3SLNfVgI9Z8.png",
+            "origin_country": "JP"
+        },
+        {
+            "id": 2064,
+            "name": "TV Setouchi",
+            "logo_path": "/qi4L1ffRabF5LJqVimCaaUYpeSj.png",
+            "origin_country": "JP"
+        }
+    ],
+    "number_of_episodes": 12,
+    "number_of_seasons": 1,
+    "origin_country": [
+        "JP"
+    ],
+    "original_language": "ja",
+    "original_name": "チェンソーマン",
+    "overview": "Denji has a simple dream—to live a happy and peaceful life, spending time with a girl he likes. This is a far cry from reality, however, as Denji is forced by the yakuza into killing devils in order to pay off his crushing debts. Using his pet devil Pochita as a weapon, he is ready to do anything for a bit of cash.",
+    "popularity": 1004.662,
+    "poster_path": "/npdB6eFzizki0WaZ1OvKcJrWe97.jpg",
+    "production_companies": [
+        {
+            "id": 21444,
+            "logo_path": "/wSejGn3lAZdQ5muByxvzigwyDY6.png",
+            "name": "MAPPA",
+            "origin_country": "JP"
+        }
+    ],
+    "production_countries": [
+        {
+            "iso_3166_1": "JP",
+            "name": "Japan"
+        }
+    ],
+    "seasons": [
+        {
+            "air_date": "2022-10-12",
+            "episode_count": 12,
+            "id": 171559,
+            "name": "Season 1",
+            "overview": "",
+            "poster_path": "/sB2DASpJtfnTs7iK3RqkUMFVDEa.jpg",
+            "season_number": 1
+        }
+    ],
+    "spoken_languages": [
+        {
+            "english_name": "Japanese",
+            "iso_639_1": "ja",
+            "name": "日本語"
+        }
+    ],
+    "status": "Returning Series",
+    "tagline": "",
+    "type": "Scripted",
+    "vote_average": 8.6,
+    "vote_count": 366
+}

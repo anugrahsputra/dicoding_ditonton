@@ -9,9 +9,9 @@ class TvTable extends Equatable {
   final String? overview;
   TvTable({
     required this.id,
-    this.name,
-    this.posterPath,
-    this.overview,
+    required this.name,
+    required this.posterPath,
+    required this.overview,
   });
 
   factory TvTable.fromEntity(TvDetail tv) => TvTable(

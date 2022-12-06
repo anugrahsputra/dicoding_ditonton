@@ -1,0 +1,29 @@
+{
+    "page": 1,
+    "results": [
+        {
+            "backdrop_path": "/5DUMPBSnHOZsbBv81GFXZXvDpo6.jpg",
+            "first_air_date": "2022-10-12",
+            "genre_ids": [
+                16,
+                10759,
+                10765,
+                35
+            ],
+            "id": 114410,
+            "name": "Chainsaw Man",
+            "origin_country": [
+                "JP"
+            ],
+            "original_language": "ja",
+            "original_name": "チェンソーマン",
+            "overview": "Denji has a simple dream—to live a happy and peaceful life, spending time with a girl he likes. This is a far cry from reality, however, as Denji is forced by the yakuza into killing devils in order to pay off his crushing debts. Using his pet devil Pochita as a weapon, he is ready to do anything for a bit of cash.",
+            "popularity": 1004.662,
+            "poster_path": "/npdB6eFzizki0WaZ1OvKcJrWe97.jpg",
+            "vote_average": 8.6,
+            "vote_count": 360
+        }
+    ],
+    "total_pages": 7044,
+    "total_results": 140864
+}
