@@ -23,7 +23,7 @@ class TvTable extends Equatable {
 
   factory TvTable.fromMap(Map<String, dynamic> map) => TvTable(
         id: map['id'],
-        name: map['title'],
+        name: map['name'],
         posterPath: map['posterPath'],
         overview: map['overview'],
       );
@@ -36,10 +36,10 @@ class TvTable extends Equatable {
       };
 
   Tv toEntity() => Tv.watchlist(
-        id: this.id,
-        name: this.name,
-        overview: this.overview,
-        posterPath: this.posterPath,
+        id: id,
+        name: name,
+        overview: overview,
+        posterPath: posterPath,
       );
 
   @override
