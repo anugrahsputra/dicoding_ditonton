@@ -1,4 +1,4 @@
-import 'package:ditonton/data/models/movie/genre_model.dart';
+import 'package:ditonton/data/models/other/genre_model.dart';
 import 'package:ditonton/domain/entities/movie/movie_detail.dart';
 import 'package:equatable/equatable.dart';
 

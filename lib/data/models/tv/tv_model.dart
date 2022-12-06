@@ -5,7 +5,7 @@ class TvModel extends Equatable {
   final String? backdropPath;
   final String? firstAirDate;
   final List<int> genreIds;
-  final int? id;
+  final int id;
   final String? name;
   final List<String> originCountry;
   final String originalLanguage;
@@ -72,7 +72,7 @@ class TvModel extends Equatable {
       name: this.name,
       originCountry: this.originCountry,
       originalLanguage: this.originalLanguage,
-      originalName: this.originalLanguage,
+      originalName: this.originalName,
       overview: this.overview,
       popularity: this.popularity,
       posterPath: this.posterPath,

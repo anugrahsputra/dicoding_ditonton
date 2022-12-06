@@ -1,4 +1,4 @@
-import 'package:ditonton/data/models/movie/genre_model.dart';
+import 'package:ditonton/data/models/other/genre_model.dart';
 import 'package:ditonton/data/models/other/created_by_model.dart';
 import 'package:ditonton/data/models/other/last_episode_to_air_model.dart';
 import 'package:ditonton/data/models/other/season_model.dart';

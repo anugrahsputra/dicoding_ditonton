@@ -36,10 +36,10 @@ class TvTable extends Equatable {
       };
 
   Tv toEntity() => Tv.watchlist(
-        id: id,
-        name: name,
-        overview: overview,
-        posterPath: posterPath,
+        id: this.id,
+        name: this.name,
+        overview: this.overview,
+        posterPath: this.posterPath,
       );
 
   @override

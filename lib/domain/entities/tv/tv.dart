@@ -1,57 +1,58 @@
 import 'package:equatable/equatable.dart';
 
 class Tv extends Equatable {
-  String? backdropPath;
-  String? firstAirDate;
-  List<int>? genreIds;
-  int? id;
-  String? name;
-  List<String>? originCountry;
-  String? originalLanguage;
-  String? originalName;
-  String? overview;
-  double? popularity;
-  String? posterPath;
-  double? voteAverage;
-  int? voteCount;
   Tv({
-    this.backdropPath,
-    this.firstAirDate,
-    required this.genreIds,
-    this.id,
-    this.name,
+    required this.posterPath,
+    required this.popularity,
+    required this.id,
+    required this.backdropPath,
+    required this.voteAverage,
+    required this.overview,
+    required this.firstAirDate,
     required this.originCountry,
-    this.originalLanguage,
-    this.originalName,
-    this.overview,
-    this.popularity,
-    this.posterPath,
-    this.voteAverage,
-    this.voteCount,
+    required this.genreIds,
+    required this.originalLanguage,
+    required this.voteCount,
+    required this.name,
+    required this.originalName,
   });
 
   Tv.watchlist({
     required this.id,
-    required this.name,
     required this.overview,
     required this.posterPath,
+    required this.name,
   });
+
+  String? posterPath;
+  double? popularity;
+  int id;
+  String? backdropPath;
+  double? voteAverage;
+  String? overview;
+  String? firstAirDate;
+  List<String>? originCountry;
+  List<int>? genreIds;
+  String? originalLanguage;
+  int? voteCount;
+  String? name;
+  String? originalName;
 
   @override
   // TODO: implement props
   List<Object?> get props => [
-        backdropPath,
-        firstAirDate,
-        genreIds,
-        id,
-        name,
-        originCountry,
-        originalLanguage,
-        originalName,
-        overview,
-        popularity,
         posterPath,
+        popularity,
+        id,
+        backdropPath,
         voteAverage,
+        overview,
+        firstAirDate,
+        originCountry,
+        genreIds,
+        originalLanguage,
         voteCount,
+        name,
+        originalName,
       ];
 }
