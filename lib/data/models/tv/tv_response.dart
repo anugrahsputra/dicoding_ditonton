@@ -13,7 +13,7 @@ class TvResponse extends Equatable {
       );
 
   Map<String, dynamic> toJson() => {
-        "result": List<dynamic>.from(tvList.map((x) => x.toJson())),
+        "results": List<dynamic>.from(tvList.map((x) => x.toJson())),
       };
 
   @override
