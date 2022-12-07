@@ -3,8 +3,8 @@ import 'package:ditonton/domain/usecases/movie/save_watchlist.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
-import '../../dummy_data/movie/movie_dummy_objects.dart';
-import '../../helpers/movie_test_helper.mocks.dart';
+import '../../../dummy_data/movie/movie_dummy_objects.dart';
+import '../../../helpers/movie_test_helper.mocks.dart';
 
 void main() {
   late SaveWatchlist usecase;
