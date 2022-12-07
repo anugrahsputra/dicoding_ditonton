@@ -1,13 +1,13 @@
 {
     "adult": false,
-    "backdrop_path": "/5DUMPBSnHOZsbBv81GFXZXvDpo6.jpg",
+    "backdrop_path": "/path.jpg",
     "created_by": [
         {
             "id": 2887554,
-            "credit_id": "638d20e47d5db5101e5637fe",
-            "name": "Tatsuki Fujimoto",
+            "credit_id": "Credit Id",
+            "name": "name",
             "gender": 2,
-            "profile_path": null
+            "profile_path": "/path.jpg"
         }
     ],
     "episode_run_time": [
@@ -43,17 +43,17 @@
         "air_date": "2022-11-30",
         "episode_number": 8,
         "id": 3963648,
-        "name": "GUNFIRE",
-        "overview": "Denji experiences his first, yet devastating, kiss.\n\nAn intoxicated Denji is taken to Himeno's house, where she starts seducing him. Feeling torn between Makima, whom he admires, and Himeno, who is standing in front of him, he decides to fall into temptation. However, Denji then finds something in his pocket: The Chupa Chups lollipop that Makima gave him.",
+        "name": "Name",
+        "overview": "Overview",
         "production_code": "",
         "runtime": 24,
         "season_number": 1,
         "show_id": 114410,
-        "still_path": "/oMRTKYMYHQBlFVYvjNuUJWzLYz5.jpg",
+        "still_path": "/path.jpg",
         "vote_average": 9.7,
         "vote_count": 3
     },
-    "name": "Chainsaw Man",
+    "name": "Name",
     "next_episode_to_air": {
         "air_date": "2022-12-07",
         "episode_number": 9,
@@ -71,38 +71,38 @@
     "networks": [
         {
             "id": 98,
-            "name": "TV Tokyo",
-            "logo_path": "/kGRavMqgyx4p2X4C96bjRCj50oI.png",
+            "name": "name",
+            "logo_path": "/path.png",
             "origin_country": "JP"
         },
         {
             "id": 252,
             "name": "TV Aichi",
-            "logo_path": "/zFZ5KCuvx7K0vP9XgGcidfXjuUd.png",
+            "logo_path": "/path.png",
             "origin_country": "JP"
         },
         {
             "id": 822,
             "name": "TVQ",
-            "logo_path": "/fGdBR7lxjrXsBlwZF7B1UNpG5ff.png",
+            "logo_path": "/path.png",
             "origin_country": "JP"
         },
         {
             "id": 824,
             "name": "TV Osaka",
-            "logo_path": "/6foQmoPac7WCDnDuDbuCZklmDuA.png",
+            "logo_path": "/path.png",
             "origin_country": "JP"
         },
         {
             "id": 938,
             "name": "TVh",
-            "logo_path": "/vEUZNYjuSn0iTQyZ3SLNfVgI9Z8.png",
+            "logo_path": "/path.png",
             "origin_country": "JP"
         },
         {
             "id": 2064,
             "name": "TV Setouchi",
-            "logo_path": "/qi4L1ffRabF5LJqVimCaaUYpeSj.png",
+            "logo_path": "/path.png",
             "origin_country": "JP"
         }
     ],
@@ -112,14 +112,14 @@
         "JP"
     ],
     "original_language": "ja",
-    "original_name": "チェンソーマン",
-    "overview": "Denji has a simple dream—to live a happy and peaceful life, spending time with a girl he likes. This is a far cry from reality, however, as Denji is forced by the yakuza into killing devils in order to pay off his crushing debts. Using his pet devil Pochita as a weapon, he is ready to do anything for a bit of cash.",
+    "original_name": "orignal name",
+    "overview": "overview",
     "popularity": 1004.662,
-    "poster_path": "/npdB6eFzizki0WaZ1OvKcJrWe97.jpg",
+    "poster_path": "/path.jpg",
     "production_companies": [
         {
             "id": 21444,
-            "logo_path": "/wSejGn3lAZdQ5muByxvzigwyDY6.png",
+            "logo_path": "/path.png",
             "name": "MAPPA",
             "origin_country": "JP"
         }
@@ -137,7 +137,7 @@
             "id": 171559,
             "name": "Season 1",
             "overview": "",
-            "poster_path": "/sB2DASpJtfnTs7iK3RqkUMFVDEa.jpg",
+            "poster_path": "/path.jpg",
             "season_number": 1
         }
     ],
@@ -145,7 +145,7 @@
         {
             "english_name": "Japanese",
             "iso_639_1": "ja",
-            "name": "日本語"
+            "name": "name"
         }
     ],
     "status": "Returning Series",
