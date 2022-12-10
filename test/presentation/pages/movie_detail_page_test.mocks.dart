@@ -16,7 +16,7 @@ import 'package:ditonton/domain/usecases/movie/get_watchlist_status.dart'
     as _i4;
 import 'package:ditonton/domain/usecases/movie/remove_watchlist.dart' as _i6;
 import 'package:ditonton/domain/usecases/movie/save_watchlist.dart' as _i5;
-import 'package:ditonton/presentation/provider/movie_detail_notifier.dart'
+import 'package:ditonton/presentation/provider/movies/movie_detail_notifier.dart'
     as _i8;
 import 'package:mockito/mockito.dart' as _i1;
 
