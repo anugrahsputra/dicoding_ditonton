@@ -13,7 +13,7 @@ class CreatedByModel extends Equatable {
   String creditId;
   String name;
   int gender;
-  String profilePath;
+  dynamic profilePath;
 
   factory CreatedByModel.fromJson(Map<String, dynamic> json) => CreatedByModel(
         id: json["id"],
