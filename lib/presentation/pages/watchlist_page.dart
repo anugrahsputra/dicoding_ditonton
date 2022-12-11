@@ -15,7 +15,7 @@ class WatchlistPage extends StatelessWidget {
           bottom: TabBar(
             tabs: [
               Tab(text: 'Movies'),
-              Tab(text: 'TV Shows'),
+              Tab(text: 'TV Series'),
             ],
           ),
         ),
