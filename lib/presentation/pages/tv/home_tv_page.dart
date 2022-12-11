@@ -63,7 +63,6 @@ class _HomeTvPageState extends State<HomeTvPage> {
               leading: Icon(Icons.save_alt),
               title: Text('Watchlist'),
               onTap: () {
-                // TODO: Navigate to watchlist page
                 Navigator.pushNamed(context, WatchlistPage.ROUTE_NAME);
               },
             ),
