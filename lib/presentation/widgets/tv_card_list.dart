@@ -7,12 +7,14 @@ import '../../common/constants.dart';
 
 class TvCard extends StatelessWidget {
   final Tv tv;
+  final int index;
 
-  TvCard(this.tv);
+  TvCard(this.tv, this.index);
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      key: Key('tv_$index'),
       margin: const EdgeInsets.symmetric(vertical: 4),
       child: InkWell(
         onTap: () {

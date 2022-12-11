@@ -53,6 +53,7 @@ class _HomeTvPageState extends State<HomeTvPage> {
               },
             ),
             ListTile(
+              key: Key('tv_series'),
               leading: Icon(Icons.tv),
               title: Text('Tv Series'),
               onTap: () {
@@ -96,6 +97,7 @@ class _HomeTvPageState extends State<HomeTvPage> {
               Text(
                 'On The Air',
                 style: kHeading6,
+                key: Key('on_the_air_tv'),
               ),
               Consumer<TvListNotifier>(builder: (context, data, child) {
                 final state = data.nowPlayingState;
@@ -110,6 +112,7 @@ class _HomeTvPageState extends State<HomeTvPage> {
                 }
               }),
               _buildSubHeading(
+                key: 'popular_tv',
                 title: 'Popular',
                 onTap: () =>
                     Navigator.pushNamed(context, PopularTvPage.ROUTE_NAME),
@@ -128,6 +131,7 @@ class _HomeTvPageState extends State<HomeTvPage> {
               }),
               _buildSubHeading(
                 title: 'Top Rated',
+                key: 'top_rated_tv',
                 onTap: () =>
                     Navigator.pushNamed(context, TopRatedTvPage.ROUTE_NAME),
               ),
@@ -151,7 +155,8 @@ class _HomeTvPageState extends State<HomeTvPage> {
   }
 }
 
-Row _buildSubHeading({required String title, required Function() onTap}) {
+Row _buildSubHeading(
+    {required String title, required Function() onTap, required String key}) {
   return Row(
     mainAxisAlignment: MainAxisAlignment.spaceBetween,
     children: [
@@ -160,6 +165,7 @@ Row _buildSubHeading({required String title, required Function() onTap}) {
         style: kHeading6,
       ),
       InkWell(
+        key: Key(key),
         onTap: onTap,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -184,6 +190,7 @@ class TvList extends StatelessWidget {
         itemBuilder: (context, index) {
           final tv = tvs[index];
           return Container(
+            key: Key('tv_series_$index'),
             padding: const EdgeInsets.all(8),
             child: InkWell(
               onTap: () {

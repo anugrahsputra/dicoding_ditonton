@@ -38,7 +38,7 @@ class _PopularTvPageState extends State<PopularTvPage> {
               return ListView.builder(
                 itemBuilder: (context, index) {
                   final tv = data.popularTv[index];
-                  return TvCard(tv);
+                  return TvCard(tv, index);
                 },
                 itemCount: data.popularTv.length,
               );

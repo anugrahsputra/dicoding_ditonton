@@ -52,6 +52,7 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
               },
             ),
             ListTile(
+              key: Key('tv_series'),
               leading: Icon(Icons.tv),
               title: Text('Tv Series'),
               onTap: () {
