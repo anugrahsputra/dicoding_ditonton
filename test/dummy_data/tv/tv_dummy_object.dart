@@ -67,9 +67,9 @@ final testTvDetail = TvDetail(
 
 final testWatchlistTv = Tv.watchlist(
   id: 1,
+  name: "name",
   overview: "overview",
   posterPath: "posterPath",
-  name: "name",
 );
 
 final testTvTable = TvTable(
@@ -81,7 +81,7 @@ final testTvTable = TvTable(
 
 final testTvMap = {
   'id': 1,
+  'name': 'name',
   'overview': 'overview',
   'posterPath': 'posterPath',
-  'name': 'name',
 };
