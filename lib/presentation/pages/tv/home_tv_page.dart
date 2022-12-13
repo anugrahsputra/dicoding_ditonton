@@ -1,6 +1,6 @@
+import 'package:about/about_page.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:ditonton/domain/entities/tv/tv.dart';
-import 'package:ditonton/presentation/pages/movie/about_page.dart';
 import 'package:ditonton/presentation/pages/movie/home_movie_page.dart';
 import 'package:ditonton/presentation/pages/tv/on_the_air_page.dart';
 import 'package:ditonton/presentation/pages/tv/popular_tv_page.dart';
