@@ -1,0 +1,156 @@
+{
+    "adult": false,
+    "backdrop_path": "/path.jpg",
+    "created_by": [
+        {
+            "id": 2887554,
+            "credit_id": "Credit Id",
+            "name": "name",
+            "gender": 2,
+            "profile_path": "/path.jpg"
+        }
+    ],
+    "episode_run_time": [
+        24
+    ],
+    "first_air_date": "2022-10-12",
+    "genres": [
+        {
+            "id": 16,
+            "name": "Animation"
+        },
+        {
+            "id": 10759,
+            "name": "Action & Adventure"
+        },
+        {
+            "id": 10765,
+            "name": "Sci-Fi & Fantasy"
+        },
+        {
+            "id": 35,
+            "name": "Comedy"
+        }
+    ],
+    "homepage": "https://chainsawman.dog/",
+    "id": 114410,
+    "in_production": true,
+    "languages": [
+        "ja"
+    ],
+    "last_air_date": "2022-11-30",
+    "last_episode_to_air": {
+        "air_date": "2022-11-30",
+        "episode_number": 8,
+        "id": 3963648,
+        "name": "Name",
+        "overview": "Overview",
+        "production_code": "",
+        "runtime": 24,
+        "season_number": 1,
+        "show_id": 114410,
+        "still_path": "/path.jpg",
+        "vote_average": 9.7,
+        "vote_count": 3
+    },
+    "name": "Name",
+    "next_episode_to_air": {
+        "air_date": "2022-12-07",
+        "episode_number": 9,
+        "id": 3963649,
+        "name": "Episode 9",
+        "overview": "",
+        "production_code": "",
+        "runtime": 24,
+        "season_number": 1,
+        "show_id": 114410,
+        "still_path": null,
+        "vote_average": 0.0,
+        "vote_count": 0
+    },
+    "networks": [
+        {
+            "id": 98,
+            "name": "name",
+            "logo_path": "/path.png",
+            "origin_country": "JP"
+        },
+        {
+            "id": 252,
+            "name": "TV Aichi",
+            "logo_path": "/path.png",
+            "origin_country": "JP"
+        },
+        {
+            "id": 822,
+            "name": "TVQ",
+            "logo_path": "/path.png",
+            "origin_country": "JP"
+        },
+        {
+            "id": 824,
+            "name": "TV Osaka",
+            "logo_path": "/path.png",
+            "origin_country": "JP"
+        },
+        {
+            "id": 938,
+            "name": "TVh",
+            "logo_path": "/path.png",
+            "origin_country": "JP"
+        },
+        {
+            "id": 2064,
+            "name": "TV Setouchi",
+            "logo_path": "/path.png",
+            "origin_country": "JP"
+        }
+    ],
+    "number_of_episodes": 12,
+    "number_of_seasons": 1,
+    "origin_country": [
+        "JP"
+    ],
+    "original_language": "ja",
+    "original_name": "orignal name",
+    "overview": "overview",
+    "popularity": 1004.662,
+    "poster_path": "/path.jpg",
+    "production_companies": [
+        {
+            "id": 21444,
+            "logo_path": "/path.png",
+            "name": "MAPPA",
+            "origin_country": "JP"
+        }
+    ],
+    "production_countries": [
+        {
+            "iso_3166_1": "JP",
+            "name": "Japan"
+        }
+    ],
+    "seasons": [
+        {
+            "air_date": "2022-10-12",
+            "episode_count": 12,
+            "id": 171559,
+            "name": "Season 1",
+            "overview": "",
+            "poster_path": "/path.jpg",
+            "season_number": 1
+        }
+    ],
+    "spoken_languages": [
+        {
+            "english_name": "Japanese",
+            "iso_639_1": "ja",
+            "name": "name"
+        }
+    ],
+    "status": "Returning Series",
+    "tagline": "",
+    "type": "Scripted",
+    "vote_average": 8.6,
+    "vote_count": 366
+}

@@ -1,0 +1,29 @@
+{
+    "page": 1,
+    "results": [
+        {
+            "backdrop_path": "/path.jpg",
+            "first_air_date": "2022-10-12",
+            "genre_ids": [
+                16,
+                10759,
+                10765,
+                35
+            ],
+            "id": 114410,
+            "name": "name",
+            "origin_country": [
+                "JP"
+            ],
+            "original_language": "ja",
+            "original_name": "original name",
+            "overview": "overview",
+            "popularity": 1004.662,
+            "poster_path": "/path.jpg",
+            "vote_average": 8.6,
+            "vote_count": 360
+        }
+    ],
+    "total_pages": 1,
+    "total_results": 1
+}
