@@ -35,7 +35,8 @@ dependencies:
     path: core
   search:
     path: search
-
+  flutter_bloc: ^8.0.0
+  
 dev_dependencies:
   mockito: ^5.0.8
   build_runner: ^2.0.4

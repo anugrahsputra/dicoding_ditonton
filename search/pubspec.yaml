@@ -1,8 +1,9 @@
 name: search
 description: A new Flutter package project.
+publish_to: 'none'
 version: 0.0.1
 homepage:
-publish_to: none
+
 
 environment:
   sdk: '>=2.18.5 <3.0.0'
@@ -13,8 +14,17 @@ dependencies:
     sdk: flutter
   core:
     path: ../core
-  dartz: ^0.10.0
   flutter_bloc: ^8.0.0
+  http: ^0.13.3
+  provider: ^6.0.3
+  dartz: ^0.10.0-nullsafety.2
+  equatable: ^2.0.2
+  google_fonts: ^3.0.1
+  flutter_rating_bar: ^4.0.0
+  cached_network_image: ^3.0.0
+  sqflite: ^2.0.0+3
+  path_provider: ^2.0.2
+  rxdart: ^0.27.1
 
 dev_dependencies:
   flutter_test:
@@ -22,6 +32,7 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   mockito: ^5.0.8
   build_runner: ^2.0.4
+  bloc_test: ^9.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

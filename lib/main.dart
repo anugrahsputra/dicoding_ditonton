@@ -27,11 +27,12 @@ import 'package:core/presentation/widgets/custom_drawer.dart';
 import 'package:ditonton/injection.dart' as di;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
+import 'package:search/presentation/bloc/search_movie_bloc.dart';
+import 'package:search/presentation/bloc/search_tv_bloc.dart';
 import 'package:search/presentation/pages/search_page.dart';
 import 'package:search/presentation/pages/search_tv_page.dart';
-import 'package:search/presentation/provider/movie_search_notifier.dart';
-import 'package:search/presentation/provider/tv_search_notifier.dart';
 
 void main() {
   di.init();
@@ -49,8 +50,8 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(
           create: (_) => di.locator<MovieDetailNotifier>(),
         ),
-        ChangeNotifierProvider(
-          create: (_) => di.locator<MovieSearchNotifier>(),
+        BlocProvider(
+          create: (_) => di.locator<SearchMovieBloc>(),
         ),
         ChangeNotifierProvider(
           create: (_) => di.locator<TopRatedMoviesNotifier>(),
@@ -67,8 +68,8 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(
           create: (_) => di.locator<TvDetailNotifier>(),
         ),
-        ChangeNotifierProvider(
-          create: (_) => di.locator<SearchTvNotifier>(),
+        BlocProvider(
+          create: (_) => di.locator<SearchTvBloc>(),
         ),
         ChangeNotifierProvider(
           create: (_) => di.locator<TopRatedTvNotifier>(),
@@ -81,6 +82,9 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (_) => di.locator<OnTheAirTvNotifier>(),
+        ),
+        BlocProvider(
+          create: (_) => di.locator<SearchMovieBloc>(),
         ),
       ],
       child: MaterialApp(
