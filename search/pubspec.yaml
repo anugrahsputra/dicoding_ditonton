@@ -2,6 +2,7 @@ name: search
 description: A new Flutter package project.
 version: 0.0.1
 homepage:
+publish_to: none
 
 environment:
   sdk: '>=2.18.5 <3.0.0'
@@ -13,6 +14,7 @@ dependencies:
   core:
     path: ../core
   dartz: ^0.10.0
+  flutter_bloc: ^8.0.0
 
 dev_dependencies:
   flutter_test:

@@ -1,7 +1,8 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:core/core.dart';
 import 'package:core/presentation/provider/tv/tv_detail_notifier.dart';
-import 'package:core/utils/state_enum.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:provider/provider.dart';
@@ -64,7 +65,7 @@ class DetailContent extends StatelessWidget {
   final TvDetail tv;
   final List<Tv> recommendations;
 
-  const DetailContent(this.tv, this.recommendations, this.isAddedWatchlist);
+  const DetailContent(this.tv, this.recommendations, this.isAddedWatchlist, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -122,7 +123,6 @@ class DetailContent extends StatelessWidget {
                                         context,
                                         listen: false)
                                     .watchlistMessage;
-
                                 if (message ==
                                         TvDetailNotifier
                                             .watchlistAddSuccessMessage ||
