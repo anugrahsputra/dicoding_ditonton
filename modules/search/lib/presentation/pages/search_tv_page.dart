@@ -62,7 +62,12 @@ class SearchTvPage extends StatelessWidget {
                   );
                 } else {
                   return Expanded(
-                    child: Container(),
+                    child: Center(
+                      child: Text(
+                        'No Result',
+                        style: kHeading6,
+                      ),
+                    ),
                   );
                 }
               },

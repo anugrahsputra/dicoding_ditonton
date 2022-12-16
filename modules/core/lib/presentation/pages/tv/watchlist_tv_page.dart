@@ -6,7 +6,9 @@ import 'package:provider/provider.dart';
 
 import '../../../utils/utils.dart';
 
+// ignore: use_key_in_widget_constructors
 class WatchlistTvPage extends StatefulWidget {
+  // ignore: constant_identifier_names
   static const ROUTE_NAME = '/watchlist-tv';
 
   @override
@@ -52,10 +54,16 @@ class _WatchlistTvPageState extends State<WatchlistTvPage> with RouteAware {
                 },
                 itemCount: data.watchListTv.length,
               );
-            } else {
+            } else if (data.watchListState == RequestState.Error) {
               return Center(
                 key: const Key('error_message'),
                 child: Text(data.message),
+              );
+            } else {
+              return const Expanded(
+                child: Center(
+                  child: Text('You don\'t have Watchlist'),
+                ),
               );
             }
           },
