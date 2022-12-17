@@ -26,6 +26,8 @@ dependencies:
   path_provider: ^2.0.2
   rxdart: ^0.27.1
   encrypt: ^5.0.1
+  firebase_core: ^2.4.0
+  firebase_crashlytics: ^3.0.7
 
 dev_dependencies:
   flutter_test:
