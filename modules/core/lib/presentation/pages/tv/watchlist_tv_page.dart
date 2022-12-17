@@ -1,10 +1,8 @@
+import 'package:core/core.dart';
 import 'package:core/presentation/provider/tv/watchlist_tv_notifier.dart';
 import 'package:core/presentation/widgets/tv_card_list.dart';
-import 'package:core/utils/state_enum.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
-import '../../../utils/utils.dart';
 
 // ignore: use_key_in_widget_constructors
 class WatchlistTvPage extends StatefulWidget {
@@ -60,10 +58,8 @@ class _WatchlistTvPageState extends State<WatchlistTvPage> with RouteAware {
                 child: Text(data.message),
               );
             } else {
-              return const Expanded(
-                child: Center(
-                  child: Text('You don\'t have Watchlist'),
-                ),
+              return Center(
+                child: Text('You don\'t have Watchlist', style: kHeading5),
               );
             }
           },

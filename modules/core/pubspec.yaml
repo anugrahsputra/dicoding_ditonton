@@ -17,10 +17,11 @@ dependencies:
   google_fonts: ^3.0.1
   flutter_rating_bar: ^4.0.0
   cached_network_image: ^3.0.0
-  sqflite: ^2.0.0+3
+  sqflite_sqlcipher: ^2.1.0
   path_provider: ^2.0.2
   rxdart: ^0.27.1
   flutter_bloc: ^8.0.0
+  encrypt: ^5.0.1
 
 dev_dependencies:
   flutter_test:
