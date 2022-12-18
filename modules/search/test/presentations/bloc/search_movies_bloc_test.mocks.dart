@@ -5,11 +5,10 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'dart:async' as _i5;
 
-import 'package:core/domain/entities/movie/movie.dart' as _i7;
-import 'package:core/domain/repositories/movie_repository.dart' as _i2;
 import 'package:core/utils/failure.dart' as _i6;
 import 'package:dartz/dartz.dart' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
+import 'package:movie/movie.dart' as _i2;
 import 'package:search/domain/usecases/movie/search_movies.dart' as _i4;
 
 // ignore_for_file: type=lint
@@ -61,19 +60,19 @@ class MockSearchMovies extends _i1.Mock implements _i4.SearchMovies {
         ),
       ) as _i2.MovieRepository);
   @override
-  _i5.Future<_i3.Either<_i6.Failure, List<_i7.Movie>>> execute(String? query) =>
+  _i5.Future<_i3.Either<_i6.Failure, List<_i2.Movie>>> execute(String? query) =>
       (super.noSuchMethod(
         Invocation.method(
           #execute,
           [query],
         ),
-        returnValue: _i5.Future<_i3.Either<_i6.Failure, List<_i7.Movie>>>.value(
-            _FakeEither_1<_i6.Failure, List<_i7.Movie>>(
+        returnValue: _i5.Future<_i3.Either<_i6.Failure, List<_i2.Movie>>>.value(
+            _FakeEither_1<_i6.Failure, List<_i2.Movie>>(
           this,
           Invocation.method(
             #execute,
             [query],
           ),
         )),
-      ) as _i5.Future<_i3.Either<_i6.Failure, List<_i7.Movie>>>);
+      ) as _i5.Future<_i3.Either<_i6.Failure, List<_i2.Movie>>>);
 }

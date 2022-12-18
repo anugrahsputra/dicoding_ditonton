@@ -10,7 +10,6 @@ import 'dart:typed_data' as _i18;
 import 'package:core/data/datasources/db/database_helper.dart' as _i14;
 import 'package:core/data/datasources/tv/tv_local_data_source.dart' as _i12;
 import 'package:core/data/datasources/tv/tv_remote_data_source.dart' as _i10;
-import 'package:core/data/models/movie/movie_table.dart' as _i16;
 import 'package:core/data/models/tv/tv_detail_model.dart' as _i3;
 import 'package:core/data/models/tv/tv_model.dart' as _i11;
 import 'package:core/data/models/tv/tv_table.dart' as _i13;
@@ -21,7 +20,8 @@ import 'package:core/utils/failure.dart' as _i7;
 import 'package:dartz/dartz.dart' as _i2;
 import 'package:http/http.dart' as _i4;
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:sqflite/sqflite.dart' as _i15;
+import 'package:movie/movie.dart' as _i16;
+import 'package:sqflite_sqlcipher/sqflite.dart' as _i15;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values

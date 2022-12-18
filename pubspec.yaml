@@ -35,6 +35,9 @@ dependencies:
     path: modules/core
   search:
     path: modules/search
+  movie:
+    path: modules/movie
+    
   flutter_bloc: ^8.0.0
   http: ^0.13.3
   provider: ^6.0.3

@@ -1,6 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:core/core.dart';
-import 'package:core/presentation/pages/movie/home_movie_page.dart';
 import 'package:core/presentation/pages/tv/on_the_air_page.dart';
 import 'package:core/presentation/pages/tv/popular_tv_page.dart';
 import 'package:core/presentation/pages/tv/top_rated_tv_page.dart';
@@ -9,6 +8,7 @@ import 'package:core/presentation/pages/watchlist_page.dart';
 import 'package:core/presentation/provider/tv/tv_list_notifier.dart';
 import 'package:core/utils/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:movie/movie.dart';
 import 'package:provider/provider.dart';
 
 import '../../../domain/entities/tv/tv.dart';

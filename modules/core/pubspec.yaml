@@ -1,5 +1,6 @@
 name: core
 description: A new Flutter package project.
+publish_to: 'none'
 version: 0.0.1
 homepage:
 
@@ -10,6 +11,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  movie: 
+    path: ../movie
+
   http: ^0.13.3
   provider: ^6.0.3
   dartz: ^0.10.0-nullsafety.2

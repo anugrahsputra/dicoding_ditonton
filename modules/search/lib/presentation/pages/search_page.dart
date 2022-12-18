@@ -1,9 +1,9 @@
 // ignore_for_file: constant_identifier_names, use_key_in_widget_constructors
 
 import 'package:core/core.dart';
-import 'package:core/presentation/widgets/movie_card_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movie/movie.dart';
 import 'package:search/presentation/bloc/search_movie_bloc.dart';
 
 class SearchPage extends StatelessWidget {

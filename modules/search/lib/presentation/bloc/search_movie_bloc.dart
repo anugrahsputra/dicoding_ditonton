@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:core/core.dart';
-import 'package:core/domain/entities/movie/movie.dart';
 import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
+import 'package:movie/movie.dart';
 import 'package:search/domain/usecases/movie/search_movies.dart';
 
 part 'search_movie_event.dart';
