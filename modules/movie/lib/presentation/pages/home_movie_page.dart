@@ -48,14 +48,14 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
               leading: const Icon(Icons.tv),
               title: const Text('Tv Series'),
               onTap: () {
-                Navigator.pushReplacementNamed(context, HomeTvPage.ROUTE_NAME);
+                Navigator.pushReplacementNamed(context, HomeTvPage.routeName);
               },
             ),
             ListTile(
               leading: const Icon(Icons.save_alt),
               title: const Text('Watchlist'),
               onTap: () {
-                Navigator.pushNamed(context, WatchlistPage.ROUTE_NAME);
+                Navigator.pushNamed(context, WatchlistPage.routeName);
               },
             ),
             ListTile(
@@ -105,7 +105,7 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
               _buildSubHeading(
                 title: 'Popular',
                 onTap: () =>
-                    Navigator.pushNamed(context, PopularMoviesPage.ROUTE_NAME),
+                    Navigator.pushNamed(context, PopularMoviesPage.routeName),
               ),
               BlocBuilder<PopularMovieBloc, MovieState>(
                 builder: (context, state) {
@@ -123,7 +123,7 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
               _buildSubHeading(
                 title: 'Top Rated',
                 onTap: () =>
-                    Navigator.pushNamed(context, TopRatedMoviesPage.ROUTE_NAME),
+                    Navigator.pushNamed(context, TopRatedMoviesPage.routeName),
               ),
               BlocBuilder<TopRatedMovieBloc, MovieState>(
                 builder: (context, state) {
@@ -186,7 +186,7 @@ class MovieList extends StatelessWidget {
               onTap: () {
                 Navigator.pushNamed(
                   context,
-                  MovieDetailPage.ROUTE_NAME,
+                  MovieDetailPage.routeName,
                   arguments: movie.id,
                 );
               },

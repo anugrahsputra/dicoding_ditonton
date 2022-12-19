@@ -5,7 +5,7 @@ import 'package:movie/movie.dart';
 import '../../core.dart';
 
 class WatchlistPage extends StatelessWidget {
-  static const ROUTE_NAME = '/watchlist-page';
+  static const routeName = '/watchlist-page';
 
   @override
   Widget build(BuildContext context) {

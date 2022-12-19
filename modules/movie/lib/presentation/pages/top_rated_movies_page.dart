@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie/movie.dart';
 
 class TopRatedMoviesPage extends StatefulWidget {
-  static const ROUTE_NAME = '/top-rated-movie';
+  static const routeName = '/top-rated-movie';
 
   @override
   _TopRatedMoviesPageState createState() => _TopRatedMoviesPageState();

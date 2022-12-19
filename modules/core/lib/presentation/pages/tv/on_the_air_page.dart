@@ -6,7 +6,7 @@ import '../../provider/tv/on_the_air_tv_notifier.dart';
 import '../../widgets/tv_card_list.dart';
 
 class OnTheAirPage extends StatefulWidget {
-  static const ROUTE_NAME = '/on-the-air';
+  static const routeName = '/on-the-air';
 
   @override
   State<OnTheAirPage> createState() => _OnTheAirPageState();

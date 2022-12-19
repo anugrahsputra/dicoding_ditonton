@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 
 class LastEpisodeToAir extends Equatable {
-  LastEpisodeToAir({
+  const LastEpisodeToAir({
     required this.airDate,
     required this.episodeNumber,
     required this.id,
@@ -24,7 +24,6 @@ class LastEpisodeToAir extends Equatable {
   final int voteCount;
 
   @override
-  // TODO: implement props
   List<Object?> get props => [
         airDate,
         episodeNumber,

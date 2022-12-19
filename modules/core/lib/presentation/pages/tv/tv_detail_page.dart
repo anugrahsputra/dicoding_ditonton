@@ -12,7 +12,7 @@ import '../../../domain/entities/tv/tv.dart';
 import '../../../domain/entities/tv/tv_detail.dart';
 
 class TvDetailPage extends StatefulWidget {
-  static const ROUTE_NAME = '/tv_detail_page';
+  static const routeName = '/tv_detail_page';
 
   final int id;
   const TvDetailPage({required this.id});
@@ -65,7 +65,8 @@ class DetailContent extends StatelessWidget {
   final TvDetail tv;
   final List<Tv> recommendations;
 
-  const DetailContent(this.tv, this.recommendations, this.isAddedWatchlist, {super.key});
+  const DetailContent(this.tv, this.recommendations, this.isAddedWatchlist,
+      {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -238,7 +239,7 @@ class DetailContent extends StatelessWidget {
                                             onTap: () {
                                               Navigator.pushReplacementNamed(
                                                 context,
-                                                TvDetailPage.ROUTE_NAME,
+                                                TvDetailPage.routeName,
                                                 arguments: tv.id,
                                               );
                                             },

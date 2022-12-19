@@ -14,7 +14,7 @@ import 'package:provider/provider.dart';
 import '../../../domain/entities/tv/tv.dart';
 
 class HomeTvPage extends StatefulWidget {
-  static const ROUTE_NAME = '/home-tv';
+  static const routeName = '/home-tv';
 
   @override
   State<HomeTvPage> createState() => _HomeTvPageState();
@@ -63,7 +63,7 @@ class _HomeTvPageState extends State<HomeTvPage> {
               leading: const Icon(Icons.save_alt),
               title: const Text('Watchlist'),
               onTap: () {
-                Navigator.pushNamed(context, WatchlistPage.ROUTE_NAME);
+                Navigator.pushNamed(context, WatchlistPage.routeName);
               },
             ),
             ListTile(
@@ -96,7 +96,7 @@ class _HomeTvPageState extends State<HomeTvPage> {
               _buildSubHeading(
                   title: 'On The Air',
                   onTap: () =>
-                      Navigator.pushNamed(context, OnTheAirPage.ROUTE_NAME),
+                      Navigator.pushNamed(context, OnTheAirPage.routeName),
                   key: 'on_the_air_tv'),
               Consumer<TvListNotifier>(builder: (context, data, child) {
                 final state = data.nowPlayingState;
@@ -114,7 +114,7 @@ class _HomeTvPageState extends State<HomeTvPage> {
                 key: 'popular_tv',
                 title: 'Popular',
                 onTap: () =>
-                    Navigator.pushNamed(context, PopularTvPage.ROUTE_NAME),
+                    Navigator.pushNamed(context, PopularTvPage.routeName),
               ),
               Consumer<TvListNotifier>(builder: (context, data, child) {
                 final state = data.popularTvState;
@@ -132,7 +132,7 @@ class _HomeTvPageState extends State<HomeTvPage> {
                 title: 'Top Rated',
                 key: 'top_rated_tv',
                 onTap: () =>
-                    Navigator.pushNamed(context, TopRatedTvPage.ROUTE_NAME),
+                    Navigator.pushNamed(context, TopRatedTvPage.routeName),
               ),
               Consumer<TvListNotifier>(builder: (context, data, child) {
                 final state = data.topRatedTvState;
@@ -195,7 +195,7 @@ class TvList extends StatelessWidget {
               onTap: () {
                 Navigator.pushNamed(
                   context,
-                  TvDetailPage.ROUTE_NAME,
+                  TvDetailPage.routeName,
                   arguments: tv.id,
                 );
               },

@@ -7,7 +7,7 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:movie/movie.dart';
 
 class MovieDetailPage extends StatefulWidget {
-  static const ROUTE_NAME = '/detail';
+  static const routeName = '/detail';
 
   final int id;
   const MovieDetailPage({required this.id});
@@ -135,6 +135,14 @@ class DetailContent extends StatelessWidget {
                                       SnackBar(content: Text(message)));
                                   BlocProvider.of<MovieWatchlistBloc>(context)
                                       .add(WatchlistStatusMovie(movie.id));
+                                } else {
+                                  showDialog(
+                                      context: context,
+                                      builder: (context) {
+                                        return const AlertDialog(
+                                          content: Text('Failed'),
+                                        );
+                                      });
                                 }
                               },
                               child: Row(
@@ -199,7 +207,7 @@ class DetailContent extends StatelessWidget {
                                             onTap: () {
                                               Navigator.pushReplacementNamed(
                                                 context,
-                                                MovieDetailPage.ROUTE_NAME,
+                                                MovieDetailPage.routeName,
                                                 arguments: movie.id,
                                               );
                                             },

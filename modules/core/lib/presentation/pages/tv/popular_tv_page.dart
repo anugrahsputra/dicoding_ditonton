@@ -6,7 +6,7 @@ import '../../../utils/state_enum.dart';
 import '../../provider/tv/pupular_tv_notifier.dart';
 
 class PopularTvPage extends StatefulWidget {
-  static const ROUTE_NAME = '/popular-tv';
+  static const routeName = '/popular-tv';
 
   @override
   State<PopularTvPage> createState() => _PopularTvPageState();

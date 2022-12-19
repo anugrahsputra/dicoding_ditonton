@@ -7,7 +7,7 @@ import 'package:provider/provider.dart';
 // ignore: use_key_in_widget_constructors
 class WatchlistTvPage extends StatefulWidget {
   // ignore: constant_identifier_names
-  static const ROUTE_NAME = '/watchlist-tv';
+  static const routeName = '/watchlist-tv';
 
   @override
   State<WatchlistTvPage> createState() => _WatchlistTvPageState();

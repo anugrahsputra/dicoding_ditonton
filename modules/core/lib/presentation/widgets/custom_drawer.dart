@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class CustomDrawer extends StatefulWidget {
   final Widget content;
 
-  CustomDrawer({
+  const CustomDrawer({
     required this.content,
   });
 
@@ -20,14 +20,14 @@ class _CustomDrawerState extends State<CustomDrawer>
     super.initState();
     _animationController = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 250),
+      duration: const Duration(milliseconds: 250),
     );
   }
 
   Widget _buildDrawer() {
     return Container(
       child: Column(
-        children: [
+        children: const [
           UserAccountsDrawerHeader(
             currentAccountPicture: CircleAvatar(
               backgroundImage: NetworkImage(
