@@ -123,7 +123,7 @@ class TvWatchlistBloc extends Bloc<TvEvent, TvState> {
       emit(TvWatchlistStatus(result));
     });
 
-    on<SaveWatchlist>((event, emit) async {
+    on<SaveTvWatchlist>((event, emit) async {
       emit(TvLoading());
       final result = await saveWatchlistTv.execute(event.tvDetail);
 
@@ -134,7 +134,7 @@ class TvWatchlistBloc extends Bloc<TvEvent, TvState> {
       });
     });
 
-    on<RemoveWatchlist>((event, emit) async {
+    on<RemoveTvWatchlist>((event, emit) async {
       emit(TvLoading());
       final result = await removeWatchlistTv.execute(event.tvDetail);
 

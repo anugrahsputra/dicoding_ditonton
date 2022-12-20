@@ -4,10 +4,9 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:tv/presentations/bloc/tv_bloc.dart';
 import 'package:tv/tv.dart';
 
-import '../../dummy_data/tv/tv_dummy_object.dart';
+import '../../dummy_data/tv_dummy_object.dart';
 import 'tv_watchlist_bloc_test.mocks.dart';
 
 @GenerateMocks([
@@ -103,7 +102,7 @@ void main() {
           .thenAnswer((_) async => true);
       return tvWatchlistBloc;
     },
-    act: (bloc) => bloc.add(SaveWatchlist(testTvDetail)),
+    act: (bloc) => bloc.add(SaveTvWatchlist(testTvDetail)),
     wait: const Duration(milliseconds: 500),
     expect: () => <TvState>[
       TvLoading(),
@@ -123,7 +122,7 @@ void main() {
           .thenAnswer((_) async => false);
       return tvWatchlistBloc;
     },
-    act: (bloc) => bloc.add(RemoveWatchlist(testTvDetail)),
+    act: (bloc) => bloc.add(RemoveTvWatchlist(testTvDetail)),
     wait: const Duration(milliseconds: 500),
     expect: () => <TvState>[
       TvLoading(),
@@ -143,7 +142,7 @@ void main() {
           .thenAnswer((_) async => false);
       return tvWatchlistBloc;
     },
-    act: (bloc) => bloc.add(SaveWatchlist(testTvDetail)),
+    act: (bloc) => bloc.add(SaveTvWatchlist(testTvDetail)),
     wait: const Duration(milliseconds: 500),
     expect: () => <TvState>[
       TvLoading(),
@@ -163,7 +162,7 @@ void main() {
           .thenAnswer((_) async => true);
       return tvWatchlistBloc;
     },
-    act: (bloc) => bloc.add(RemoveWatchlist(testTvDetail)),
+    act: (bloc) => bloc.add(RemoveTvWatchlist(testTvDetail)),
     wait: const Duration(milliseconds: 500),
     expect: () => <TvState>[
       TvLoading(),

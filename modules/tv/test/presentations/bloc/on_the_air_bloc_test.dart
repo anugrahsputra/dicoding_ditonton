@@ -7,7 +7,7 @@ import 'package:mockito/mockito.dart';
 import 'package:tv/domain/usecases/get_now_playing_tv.dart';
 import 'package:tv/presentations/bloc/tv_bloc.dart';
 
-import '../../dummy_data/tv/tv_dummy_object.dart';
+import '../../dummy_data/tv_dummy_object.dart';
 import 'on_the_air_bloc_test.mocks.dart';
 
 @GenerateMocks([GetNowPlayingTv])

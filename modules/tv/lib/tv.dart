@@ -19,6 +19,7 @@ export 'domain/usecases/get_watchlist_tv.dart';
 export 'domain/usecases/get_watchlist_tv_status.dart';
 export 'domain/usecases/remove_watchlist_tv.dart';
 export 'domain/usecases/save_watchlist_tv.dart';
+export 'presentations/bloc/tv_bloc.dart';
 export 'presentations/pages/home_tv_page.dart';
 export 'presentations/pages/on_the_air_page.dart';
 export 'presentations/pages/popular_tv_page.dart';

@@ -16,7 +16,7 @@ abstract class MovieRemoteDataSource {
 }
 
 class MovieRemoteDataSourceImpl implements MovieRemoteDataSource {
-  static const apiKey = 'apiKey=8c2288634235370aeb1e214778675bf3';
+  static const apiKey = 'api_key=8c2288634235370aeb1e214778675bf3';
   static const baseUrl = 'https://api.themoviedb.org/3';
 
   final http.Client client;

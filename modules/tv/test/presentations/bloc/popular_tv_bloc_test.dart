@@ -4,10 +4,9 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:tv/presentations/bloc/tv_bloc.dart';
 import 'package:tv/tv.dart';
 
-import '../../dummy_data/tv/tv_dummy_object.dart';
+import '../../dummy_data/tv_dummy_object.dart';
 import 'popular_tv_bloc_test.mocks.dart';
 
 @GenerateMocks([GetPopularTv])

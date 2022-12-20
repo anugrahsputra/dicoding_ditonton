@@ -21,14 +21,14 @@ void main() {
     voteAverage: 1,
     voteCount: 1,
   );
-  final tTvResponseModel = TvResponse(tvList: <TvModel>[tTvModel]);
+  final tTvResponseModel = const TvResponse(tvList: <TvModel>[tTvModel]);
   group('fromJson', () {
     test(
       "should return a valid model from JSON",
       () async {
         // arrange
         final Map<String, dynamic> jsonMap =
-            json.decode(readJson('dummy_data/tv/now_playing_tv.json'));
+            json.decode(readJson('dummy_data/now_playing_tv.json'));
         // act
         final result = TvResponse.fromJson(jsonMap);
         // assert

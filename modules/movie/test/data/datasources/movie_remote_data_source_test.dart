@@ -4,13 +4,15 @@ import 'package:core/utils/exception.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:mockito/mockito.dart';
-import 'package:movie/movie.dart';
+import 'package:movie/data/datasources/movie_remote_data_source.dart';
+import 'package:movie/data/models/movie_detail_model.dart';
+import 'package:movie/data/models/movie_response.dart';
 
 import '../../helpers/movie_test_helper.mocks.dart';
 import '../../json_reader.dart';
 
 void main() {
-  const apiKey = 'apiKey=8c2288634235370aeb1e214778675bf3';
+  const apiKey = 'api_key=8c2288634235370aeb1e214778675bf3';
   const baseUrl = 'https://api.themoviedb.org/3';
 
   late MovieRemoteDataSourceImpl dataSource;

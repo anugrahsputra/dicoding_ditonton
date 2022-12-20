@@ -2,8 +2,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:core/core.dart';
 import 'package:core/utils/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie/movie.dart';
-import 'package:provider/provider.dart';
 import 'package:tv/tv.dart';
 
 class HomeTvPage extends StatefulWidget {
@@ -17,10 +17,11 @@ class _HomeTvPageState extends State<HomeTvPage> {
   @override
   void initState() {
     super.initState();
-    Future.microtask(() => Provider.of<TvListNotifier>(context, listen: false)
-      ..fetchNowPlayingTv()
-      ..fetchPopularTv()
-      ..fetchTopRatedTv());
+    Future.microtask(() {
+      context.read<OnTheAirBloc>().add(OnTheAir());
+      context.read<PopularBloc>().add(PopularTv());
+      context.read<TopRatedBloc>().add(TopRatedTv());
+    });
   }
 
   @override
@@ -91,54 +92,57 @@ class _HomeTvPageState extends State<HomeTvPage> {
                   onTap: () =>
                       Navigator.pushNamed(context, OnTheAirPage.routeName),
                   key: 'on_the_air_tv'),
-              Consumer<TvListNotifier>(builder: (context, data, child) {
-                final state = data.nowPlayingState;
-                if (state == RequestState.Loading) {
-                  return const Center(
-                    child: CircularProgressIndicator(),
-                  );
-                } else if (state == RequestState.Loaded) {
-                  return TvList(data.nowPlayingTv);
-                } else {
-                  return const Text('Failed');
-                }
-              }),
+              BlocBuilder<OnTheAirBloc, TvState>(
+                builder: (context, state) {
+                  if (state is TvLoading) {
+                    return const Center(
+                      child: CircularProgressIndicator(),
+                    );
+                  } else if (state is TvListHasData) {
+                    return TvList(state.tvList);
+                  } else {
+                    return const Text('Failed');
+                  }
+                },
+              ),
               _buildSubHeading(
                 key: 'popular_tv',
                 title: 'Popular',
                 onTap: () =>
                     Navigator.pushNamed(context, PopularTvPage.routeName),
               ),
-              Consumer<TvListNotifier>(builder: (context, data, child) {
-                final state = data.popularTvState;
-                if (state == RequestState.Loading) {
-                  return const Center(
-                    child: CircularProgressIndicator(),
-                  );
-                } else if (state == RequestState.Loaded) {
-                  return TvList(data.popularTv);
-                } else {
-                  return const Text('Failed');
-                }
-              }),
+              BlocBuilder<PopularBloc, TvState>(
+                builder: (context, state) {
+                  if (state is TvLoading) {
+                    return const Center(
+                      child: CircularProgressIndicator(),
+                    );
+                  } else if (state is TvListHasData) {
+                    return TvList(state.tvList);
+                  } else {
+                    return const Text('Failed');
+                  }
+                },
+              ),
               _buildSubHeading(
                 title: 'Top Rated',
                 key: 'top_rated_tv',
                 onTap: () =>
                     Navigator.pushNamed(context, TopRatedTvPage.routeName),
               ),
-              Consumer<TvListNotifier>(builder: (context, data, child) {
-                final state = data.topRatedTvState;
-                if (state == RequestState.Loading) {
-                  return const Center(
-                    child: CircularProgressIndicator(),
-                  );
-                } else if (state == RequestState.Loaded) {
-                  return TvList(data.topRatedTv);
-                } else {
-                  return const Text('Failed');
-                }
-              }),
+              BlocBuilder<TopRatedBloc, TvState>(
+                builder: (context, state) {
+                  if (state is TvLoading) {
+                    return const Center(
+                      child: CircularProgressIndicator(),
+                    );
+                  } else if (state is TvListHasData) {
+                    return TvList(state.tvList);
+                  } else {
+                    return const Text('Failed');
+                  }
+                },
+              ),
             ],
           ),
         ),
