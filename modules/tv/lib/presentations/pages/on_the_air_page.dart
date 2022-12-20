@@ -1,5 +1,5 @@
-import 'package:core/core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 import 'package:tv/tv.dart';
 
@@ -14,9 +14,7 @@ class _OnTheAirPageState extends State<OnTheAirPage> {
   @override
   void initState() {
     super.initState();
-    Future.microtask(() =>
-        Provider.of<OnTheAirTvNotifier>(context, listen: false)
-          ..fetchOnTheAirTv());
+    Future.microtask(() => context.read<OnTheAirBloc>().add(OnTheAir()));
   }
 
   @override
@@ -27,24 +25,24 @@ class _OnTheAirPageState extends State<OnTheAirPage> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Consumer<OnTheAirTvNotifier>(
-          builder: (context, data, child) {
-            if (data.state == RequestState.Loading) {
+        child: BlocBuilder<OnTheAirBloc, TvState>(
+          builder: (context, state) {
+            if (state is TvLoading) {
               return const Center(
                 child: CircularProgressIndicator(),
               );
-            } else if (data.state == RequestState.Loaded) {
+            } else if (state is TvListHasData) {
               return ListView.builder(
                 itemBuilder: (context, index) {
-                  final tv = data.tv[index];
+                  final tv = state.tvList[index];
                   return TvCard(tv, index);
                 },
-                itemCount: data.tv.length,
+                itemCount: state.tvList.length,
               );
             } else {
-              return Center(
-                key: const Key('error_message'),
-                child: Text(data.message),
+              return const Center(
+                key: Key('error_message'),
+                child: Text('Failed'),
               );
             }
           },

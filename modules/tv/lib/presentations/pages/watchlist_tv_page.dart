@@ -1,5 +1,6 @@
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 import 'package:tv/tv.dart';
 
@@ -16,9 +17,7 @@ class _WatchlistTvPageState extends State<WatchlistTvPage> with RouteAware {
   @override
   void initState() {
     super.initState();
-    Future.microtask(() =>
-        Provider.of<WatchlistTvNotifier>(context, listen: false)
-          ..fetchWatchlistTv());
+    Future.microtask(() => context.read<TvWatchlistBloc>().add(WatchlistTv()));
   }
 
   @override
@@ -29,7 +28,7 @@ class _WatchlistTvPageState extends State<WatchlistTvPage> with RouteAware {
 
   @override
   void didPopNext() {
-    Provider.of<WatchlistTvNotifier>(context, listen: false).fetchWatchlistTv();
+    context.read<TvWatchlistBloc>().add(WatchlistTv());
   }
 
   @override
@@ -37,28 +36,23 @@ class _WatchlistTvPageState extends State<WatchlistTvPage> with RouteAware {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Consumer<WatchlistTvNotifier>(
-          builder: (context, data, child) {
-            if (data.watchListState == RequestState.Loading) {
+        child: BlocBuilder<TvWatchlistBloc, TvState>(
+          builder: (context, state) {
+            if (state is TvLoading) {
               return const Center(
                 child: CircularProgressIndicator(),
               );
-            } else if (data.watchListState == RequestState.Loaded) {
+            } else if (state is TvListHasData) {
               return ListView.builder(
                 itemBuilder: (context, index) {
-                  final tv = data.watchListTv[index];
+                  final tv = state.tvList[index];
                   return TvCard(tv, index);
                 },
-                itemCount: data.watchListTv.length,
-              );
-            } else if (data.watchListState == RequestState.Error) {
-              return Center(
-                key: const Key('error_message'),
-                child: Text(data.message),
+                itemCount: state.tvList.length,
               );
             } else {
-              return Center(
-                child: Text('You don\'t have Watchlist', style: kHeading5),
+              return const Center(
+                child: Text('Failed'),
               );
             }
           },

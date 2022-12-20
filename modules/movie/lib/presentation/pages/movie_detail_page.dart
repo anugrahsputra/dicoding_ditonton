@@ -1,6 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:core/core.dart';
-import 'package:core/domain/entities/genre.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -31,32 +30,34 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: BlocBuilder<MovieDetailBloc, MovieState>(
-      builder: (context, state) {
-        if (state is MovieLoading) {
-          return const Center(
-            child: CircularProgressIndicator(),
-          );
-        } else if (state is MovieDetailHasData) {
-          final movie = state.movieDetail;
-          final recommendations = context
-              .select<MovieRecommentaionsBloc, List<Movie>>(
-                  (MovieRecommentaionsBloc result) {
-            final state = result.state;
-            return state is MovieListHasData ? state.movieList : [];
-          });
-          final isAddedWatchlist = context
-              .select<MovieWatchlistBloc, bool>((MovieWatchlistBloc result) {
-            final state = result.state;
-            return state is MovieWatchlistStatus ? state.status : false;
-          });
-          return SafeArea(
-              child: DetailContent(movie, recommendations, isAddedWatchlist));
-        } else {
-          return const Text('Failed');
-        }
-      },
-    ));
+    return Scaffold(
+      body: BlocBuilder<MovieDetailBloc, MovieState>(
+        builder: (context, state) {
+          if (state is MovieLoading) {
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
+          } else if (state is MovieDetailHasData) {
+            final movie = state.movieDetail;
+            final recommendations = context
+                .select<MovieRecommentaionsBloc, List<Movie>>(
+                    (MovieRecommentaionsBloc result) {
+              final state = result.state;
+              return state is MovieListHasData ? state.movieList : [];
+            });
+            final isAddedWatchlist = context
+                .select<MovieWatchlistBloc, bool>((MovieWatchlistBloc result) {
+              final state = result.state;
+              return state is MovieWatchlistStatus ? state.status : false;
+            });
+            return SafeArea(
+                child: DetailContent(movie, recommendations, isAddedWatchlist));
+          } else {
+            return const Text('Failed');
+          }
+        },
+      ),
+    );
   }
 }
 

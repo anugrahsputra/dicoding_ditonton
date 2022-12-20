@@ -6,6 +6,7 @@ import 'package:search/domain/usecases/movie/search_movies.dart';
 import 'package:search/domain/usecases/tv/search_tv.dart';
 import 'package:search/presentation/bloc/search_movie_bloc.dart';
 import 'package:search/presentation/bloc/search_tv_bloc.dart';
+import 'package:tv/presentations/bloc/tv_bloc.dart';
 import 'package:tv/tv.dart';
 
 final locator = GetIt.instance;
@@ -43,6 +44,27 @@ void init() {
       locator(),
     ),
   );
+  locator.registerFactory(
+    () => OnTheAirBloc(locator()),
+  );
+  locator.registerFactory(
+    () => PopularBloc(locator()),
+  );
+  locator.registerFactory(
+    () => TopRatedBloc(locator()),
+  );
+  locator.registerFactory(
+    () => TvDetailBloc(locator()),
+  );
+  locator.registerFactory(
+    () => TvRecommendationBloc(locator()),
+  );
+  locator.registerFactory(() => TvWatchlistBloc(
+        locator(),
+        locator(),
+        locator(),
+        locator(),
+      ));
 
   // provider
 
