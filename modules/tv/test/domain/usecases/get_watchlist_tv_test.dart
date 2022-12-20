@@ -3,8 +3,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:tv/tv.dart';
 
-import '../dummy_data/tv/tv_dummy_object.dart';
-import '../helpers/tv_test_helper.mocks.dart';
+import '../../dummy_data/tv/tv_dummy_object.dart';
+import '../../helpers/tv_test_helper.mocks.dart';
 
 void main() {
   late GetWatchlistTv usecase;

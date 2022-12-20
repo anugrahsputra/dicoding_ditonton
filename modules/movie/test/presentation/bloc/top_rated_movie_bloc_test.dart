@@ -52,6 +52,7 @@ void main() {
       return topRatedMovieBloc;
     },
     act: (bloc) => bloc.add(TopRatedMovie()),
+    wait: const Duration(milliseconds: 500),
     expect: () => <MovieState>[
       MovieLoading(),
       const MovieError('Server Failure'),

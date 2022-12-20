@@ -57,10 +57,8 @@ class MovieRecommentaionsBloc extends Bloc<MovieEvent, MovieState> {
 
   MovieRecommentaionsBloc(this.movieRecommendations) : super(MovieEmpty()) {
     on<MovieRecommendations>((event, emit) async {
-      final id = event.id;
-
       emit(MovieLoading());
-      final result = await movieRecommendations.execute(id);
+      final result = await movieRecommendations.execute(event.id);
 
       result.fold(
         (failure) => emit(MovieError(failure.message)),
@@ -75,10 +73,8 @@ class MovieDetailBloc extends Bloc<MovieEvent, MovieState> {
 
   MovieDetailBloc(this.movieDetail) : super(MovieEmpty()) {
     on<MovieDetails>((event, emit) async {
-      final id = event.id;
-
       emit(MovieLoading());
-      final result = await movieDetail.execute(id);
+      final result = await movieDetail.execute(event.id);
 
       result.fold((failure) {
         emit(MovieError(failure.message));
@@ -115,18 +111,14 @@ class MovieWatchlistBloc extends Bloc<MovieEvent, MovieState> {
     });
 
     on<WatchlistStatusMovie>((event, emit) async {
-      final id = event.id;
-
       emit(MovieLoading());
-      final result = await watchListStatus.execute(id);
+      final result = await watchListStatus.execute(event.id);
       emit(MovieWatchlistStatus(result));
     });
 
     on<SaveWatchlistMovie>((event, emit) async {
-      final movieDetail = event.movieDetail;
-
       emit(MovieLoading());
-      final result = await saveWatchlistMovie.execute(movieDetail);
+      final result = await saveWatchlistMovie.execute(event.movieDetail);
 
       result.fold(
         (failure) => emit(MovieError(failure.message)),
@@ -134,10 +126,8 @@ class MovieWatchlistBloc extends Bloc<MovieEvent, MovieState> {
       );
     });
     on<RemoveWatchlistMovie>((event, emit) async {
-      final movieDetail = event.movieDetail;
-
       emit(MovieLoading());
-      final result = await removeWatchlistMovie.execute(movieDetail);
+      final result = await removeWatchlistMovie.execute(event.movieDetail);
 
       result.fold(
         (failure) => emit(MovieError(failure.message)),

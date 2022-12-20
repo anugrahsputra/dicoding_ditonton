@@ -61,7 +61,7 @@ void main() {
   );
 
   blocTest<MovieWatchlistBloc, MovieState>(
-    'should emit [Loading, Error] when get top rated is unsuccessful.',
+    'should emit [Loading, Error] when data is gotten unsuccessfully.',
     build: () {
       when(mockGetWatchlistMovies.execute())
           .thenAnswer((_) async => Left(ServerFailure('Server Failure')));
