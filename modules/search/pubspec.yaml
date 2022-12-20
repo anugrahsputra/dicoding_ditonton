@@ -16,6 +16,8 @@ dependencies:
     path: ../core
   movie:
     path: ../movie
+  tv:
+    path: ../tv
   flutter_bloc: ^8.0.0
   http: ^0.13.3
   provider: ^6.0.3

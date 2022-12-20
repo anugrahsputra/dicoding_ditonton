@@ -9,16 +9,20 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
-  cached_network_image: ^3.0.0
+  flutter:
+    sdk: flutter
   core:
     path: ../core
+  search:
+    path: ../search
+  tv:
+    path: ../tv
+  cached_network_image: ^3.0.0
   dartz: ^0.10.0-nullsafety.2
   encrypt: ^5.0.1
   equatable: ^2.0.2
   firebase_core: ^2.4.0
   firebase_crashlytics: ^3.0.7
-  flutter:
-    sdk: flutter
   flutter_bloc: ^8.0.0
   flutter_rating_bar: ^4.0.0
   google_fonts: ^3.0.1
@@ -27,8 +31,6 @@ dependencies:
   path_provider: ^2.0.2
   provider: ^6.0.3
   rxdart: ^0.27.1
-  search:
-    path: ../search
   sqflite: ^2.0.0+3
 
 dev_dependencies:

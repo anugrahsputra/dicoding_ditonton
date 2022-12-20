@@ -13,6 +13,8 @@ dependencies:
     sdk: flutter
   movie: 
     path: ../movie
+  tv:
+    path: ../tv
 
   http: ^0.13.3
   provider: ^6.0.3

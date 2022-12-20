@@ -1,18 +1,6 @@
 import 'package:about/about.dart';
 import 'package:core/core.dart';
-import 'package:core/presentation/pages/tv/home_tv_page.dart';
-import 'package:core/presentation/pages/tv/on_the_air_page.dart';
-import 'package:core/presentation/pages/tv/popular_tv_page.dart';
-import 'package:core/presentation/pages/tv/top_rated_tv_page.dart';
-import 'package:core/presentation/pages/tv/tv_detail_page.dart';
-import 'package:core/presentation/pages/tv/watchlist_tv_page.dart';
 import 'package:core/presentation/pages/watchlist_page.dart';
-import 'package:core/presentation/provider/tv/on_the_air_tv_notifier.dart';
-import 'package:core/presentation/provider/tv/pupular_tv_notifier.dart';
-import 'package:core/presentation/provider/tv/top_rated_tv_notifier.dart';
-import 'package:core/presentation/provider/tv/tv_detail_notifier.dart';
-import 'package:core/presentation/provider/tv/tv_list_notifier.dart';
-import 'package:core/presentation/provider/tv/watchlist_tv_notifier.dart';
 import 'package:core/presentation/widgets/custom_drawer.dart';
 import 'package:ditonton/firebase_options.dart';
 import 'package:ditonton/injection.dart' as di;
@@ -26,6 +14,7 @@ import 'package:search/presentation/bloc/search_movie_bloc.dart';
 import 'package:search/presentation/bloc/search_tv_bloc.dart';
 import 'package:search/presentation/pages/search_page.dart';
 import 'package:search/presentation/pages/search_tv_page.dart';
+import 'package:tv/tv.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

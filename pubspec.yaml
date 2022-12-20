@@ -37,6 +37,8 @@ dependencies:
     path: modules/search
   movie:
     path: modules/movie
+  tv:
+    path: modules/tv
     
   flutter_bloc: ^8.0.0
   http: ^0.13.3

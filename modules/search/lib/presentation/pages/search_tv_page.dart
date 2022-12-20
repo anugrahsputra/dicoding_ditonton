@@ -1,10 +1,10 @@
 // ignore_for_file: use_key_in_widget_constructors, constant_identifier_names
 
 import 'package:core/core.dart';
-import 'package:core/presentation/widgets/tv_card_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:search/presentation/bloc/search_tv_bloc.dart';
+import 'package:tv/tv.dart';
 
 class SearchTvPage extends StatelessWidget {
   static const routeName = '/search_tv_page';

@@ -8,7 +8,6 @@ import 'dart:convert' as _i14;
 import 'dart:typed_data' as _i15;
 
 import 'package:core/core.dart' as _i7;
-import 'package:core/data/models/tv/tv_table.dart' as _i13;
 import 'package:dartz/dartz.dart' as _i2;
 import 'package:http/http.dart' as _i4;
 import 'package:mockito/mockito.dart' as _i1;
@@ -19,6 +18,7 @@ import 'package:movie/domain/entities/movie.dart' as _i8;
 import 'package:movie/domain/entities/movie_detail.dart' as _i9;
 import 'package:movie/movie.dart' as _i5;
 import 'package:sqflite_sqlcipher/sqflite.dart' as _i12;
+import 'package:tv/tv.dart' as _i13;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values

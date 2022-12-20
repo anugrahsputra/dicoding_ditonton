@@ -1,9 +1,9 @@
 import 'package:bloc/bloc.dart';
 import 'package:core/core.dart';
-import 'package:core/domain/entities/tv/tv.dart';
 import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
 import 'package:search/domain/usecases/tv/search_tv.dart';
+import 'package:tv/tv.dart';
 
 part 'search_tv_event.dart';
 part 'search_tv_state.dart';
