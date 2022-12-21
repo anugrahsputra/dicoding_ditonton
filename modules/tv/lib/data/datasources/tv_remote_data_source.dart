@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:core/utils/exception.dart';
-import 'package:http/http.dart' as http;
+import 'package:http/io_client.dart';
 import 'package:tv/tv.dart';
 
 abstract class TvRemoteDataSource {
@@ -17,7 +17,7 @@ class TvRemoteDataSourceImpl implements TvRemoteDataSource {
   static const apiKey = 'api_key=8c2288634235370aeb1e214778675bf3';
   static const baseUrl = 'https://api.themoviedb.org/3';
 
-  final http.Client client;
+  final IOClient client;
 
   TvRemoteDataSourceImpl({required this.client});
 
