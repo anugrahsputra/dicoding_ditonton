@@ -9,7 +9,7 @@ void main() {
 
     testWidgets('Tv Test', (widgetTest) async {
       await binding.traceAction(() async {
-        int tvIndex = 10;
+        int tvIndex = 1;
         final tvSeriesMenu = find.byKey(Key('tv_series'));
         final scrollFinder = find.byType(Scrollable);
         final tvFinder = find.byKey(Key('tv_$tvIndex'));
@@ -32,17 +32,17 @@ void main() {
         await widgetTest.tap(find.byIcon(Icons.search));
         await widgetTest.pumpAndSettle();
         expect(find.byType(TextField), findsOneWidget);
-        await widgetTest.enterText(find.byType(TextField), 'chain');
+        await widgetTest.enterText(find.byType(TextField), 'attack on titan');
         await widgetTest.testTextInput.receiveAction(TextInputAction.done);
         await widgetTest.pumpAndSettle();
 
         // Scroll to TV Series
         await widgetTest.scrollUntilVisible(tvFinder, 500,
             scrollable: scrollFinder.last);
-        expect(tvFinder, findsOneWidget);
+        await widgetTest.pumpAndSettle();
 
         // Tap TV Series
-        await widgetTest.tap(tvFinder); // tv_10
+        await widgetTest.tap(tvFinder);
         await widgetTest.pumpAndSettle();
 
         // Tap Watchlist Button
@@ -81,10 +81,10 @@ void main() {
         expect(find.byType(SnackBar), findsOneWidget);
 
         // Tap Back Button
-        // await widgetTest.tap(backbuttonFinder);
-        // await widgetTest.pumpAndSettle();
-        // await widgetTest.tap(backbuttonFinder);
-        // await widgetTest.pumpAndSettle();
+        await widgetTest.tap(backbuttonFinder);
+        await widgetTest.pumpAndSettle();
+        await widgetTest.tap(backbuttonFinder);
+        await widgetTest.pumpAndSettle();
       });
     });
   });
