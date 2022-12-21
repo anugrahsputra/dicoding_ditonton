@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:integration_test/integration_test.dart';
-import 'package:flutter_test/flutter_test.dart';
 import 'package:ditonton/main.dart' as app;
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:integration_test/integration_test.dart';
 
 void main() {
   group('App Testing', () {
@@ -39,14 +39,16 @@ void main() {
         // Scroll to TV Series
         await widgetTest.scrollUntilVisible(tvFinder, 500,
             scrollable: scrollFinder.last);
+        expect(tvFinder, findsOneWidget);
 
         // Tap TV Series
         await widgetTest.tap(tvFinder); // tv_10
         await widgetTest.pumpAndSettle();
 
         // Tap Watchlist Button
-        await widgetTest.tap(find.byIcon(Icons.add));
+        await widgetTest.tap(addWatchlistbuttonFinder);
         await widgetTest.pumpAndSettle();
+        expect(checkWatchlistbuttonFinder, findsOneWidget);
 
         // Tap Back Button
         await widgetTest.tap(backbuttonFinder);
@@ -59,7 +61,7 @@ void main() {
         await widgetTest.pumpAndSettle();
 
         // Scroll Popular TV Series
-        await widgetTest.scrollUntilVisible(tvFinder, 500,
+        await widgetTest.scrollUntilVisible(tvFinder, 200,
             scrollable: scrollFinder);
         await widgetTest.pumpAndSettle();
         expect(tvFinder, findsOneWidget);
@@ -69,7 +71,7 @@ void main() {
         // Add Watchlist Button
         await widgetTest.tap(addWatchlistbuttonFinder);
         expect(addWatchlistbuttonFinder, findsOneWidget);
-        await widgetTest.pump(Duration(seconds: 5));
+        await widgetTest.pump(Duration(seconds: 3));
         expect(find.byType(SnackBar), findsOneWidget);
 
         // Remove Watchlist Button
@@ -79,10 +81,10 @@ void main() {
         expect(find.byType(SnackBar), findsOneWidget);
 
         // Tap Back Button
-        await widgetTest.tap(backbuttonFinder);
-        await widgetTest.pumpAndSettle();
-        await widgetTest.tap(backbuttonFinder);
-        await widgetTest.pumpAndSettle();
+        // await widgetTest.tap(backbuttonFinder);
+        // await widgetTest.pumpAndSettle();
+        // await widgetTest.tap(backbuttonFinder);
+        // await widgetTest.pumpAndSettle();
       });
     });
   });
