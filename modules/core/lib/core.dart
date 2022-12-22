@@ -1,0 +1,20 @@
+library core;
+
+export 'data/datasources/database_helper.dart';
+export 'data/models/other/created_by_model.dart';
+export 'data/models/other/genre_model.dart';
+export 'data/models/other/last_episode_to_air_model.dart';
+export 'data/models/other/season_model.dart';
+export 'domain/entities/genre.dart';
+export 'domain/entities/last_episode_to_air.dart';
+export 'domain/entities/season.dart';
+export 'presentation/pages/watchlist_page.dart';
+export 'presentation/widgets/custom_drawer.dart';
+export 'styles/colors.dart';
+export 'styles/text_styles.dart';
+export 'utils/constants.dart';
+export 'utils/exception.dart';
+export 'utils/failure.dart';
+export 'utils/ssl_pinning.dart';
+export 'utils/state_enum.dart';
+export 'utils/utils.dart';
