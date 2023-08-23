@@ -48,7 +48,7 @@ void main() {
     'should emit [Loading, Error] when data is gotten unsuccessfully',
     build: () {
       when(mockGetNowPlayingMovies.execute())
-          .thenAnswer((_) async => Left(ServerFailure('Server Failure')));
+          .thenAnswer((_) async => const Left(ServerFailure('Server Failure')));
       return nowPlayingMovieBloc;
     },
     act: (bloc) => bloc.add(NowPlayingMovie()),

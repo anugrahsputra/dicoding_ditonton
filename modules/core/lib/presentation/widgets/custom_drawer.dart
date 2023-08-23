@@ -25,27 +25,25 @@ class _CustomDrawerState extends State<CustomDrawer>
   }
 
   Widget _buildDrawer() {
-    return Container(
-      child: Column(
-        children: const [
-          UserAccountsDrawerHeader(
-            currentAccountPicture: CircleAvatar(
-              backgroundImage: NetworkImage(
-                  'https://raw.githubusercontent.com/dicodingacademy/assets/main/flutter_expert_academy/dicoding-icon.png'),
-            ),
-            accountName: Text('Ditonton'),
-            accountEmail: Text('ditonton@dicoding.com'),
+    return const Column(
+      children: [
+        UserAccountsDrawerHeader(
+          currentAccountPicture: CircleAvatar(
+            backgroundImage: NetworkImage(
+                'https://raw.githubusercontent.com/dicodingacademy/assets/main/flutter_expert_academy/dicoding-icon.png'),
           ),
-          ListTile(
-            leading: Icon(Icons.movie),
-            title: Text('Movies'),
-          ),
-          ListTile(
-            leading: Icon(Icons.save_alt),
-            title: Text('Watchlist'),
-          ),
-        ],
-      ),
+          accountName: Text('Ditonton'),
+          accountEmail: Text('ditonton@dicoding.com'),
+        ),
+        ListTile(
+          leading: Icon(Icons.movie),
+          title: Text('Movies'),
+        ),
+        ListTile(
+          leading: Icon(Icons.save_alt),
+          title: Text('Watchlist'),
+        ),
+      ],
     );
   }
 

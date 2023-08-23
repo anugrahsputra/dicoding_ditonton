@@ -22,11 +22,11 @@ void main() {
     () async {
       // arrange
       when(mockTvRepository.getTvDetail(tId))
-          .thenAnswer((_) async => Right(testTvDetail));
+          .thenAnswer((_) async => const Right(testTvDetail));
       // act
       final result = await usecase.execute(tId);
       // assert
-      expect(result, Right(testTvDetail));
+      expect(result, const Right(testTvDetail));
     },
   );
 }

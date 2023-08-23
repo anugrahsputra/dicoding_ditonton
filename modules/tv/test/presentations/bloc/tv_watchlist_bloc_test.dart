@@ -61,7 +61,7 @@ void main() {
     'should emit [Loading, Error] when data is gotten unsuccessfully.',
     build: () {
       when(mockGetWatchlistTv.execute())
-          .thenAnswer((_) async => Left(ServerFailure('Server Failure')));
+          .thenAnswer((_) async => const Left(ServerFailure('Server Failure')));
       return tvWatchlistBloc;
     },
     act: (bloc) => bloc.add(WatchlistTv()),
@@ -102,7 +102,7 @@ void main() {
           .thenAnswer((_) async => true);
       return tvWatchlistBloc;
     },
-    act: (bloc) => bloc.add(SaveTvWatchlist(testTvDetail)),
+    act: (bloc) => bloc.add(const SaveTvWatchlist(testTvDetail)),
     wait: const Duration(milliseconds: 500),
     expect: () => <TvState>[
       TvLoading(),
@@ -122,7 +122,7 @@ void main() {
           .thenAnswer((_) async => false);
       return tvWatchlistBloc;
     },
-    act: (bloc) => bloc.add(RemoveTvWatchlist(testTvDetail)),
+    act: (bloc) => bloc.add(const RemoveTvWatchlist(testTvDetail)),
     wait: const Duration(milliseconds: 500),
     expect: () => <TvState>[
       TvLoading(),
@@ -137,12 +137,12 @@ void main() {
     'should emit [Loading, Error] when save to watchlist is unsuccessful',
     build: () {
       when(mockSaveWatchlistTv.execute(testTvDetail))
-          .thenAnswer((_) async => Left(DatabaseFailure('Database Failure')));
+          .thenAnswer((_) async => const Left(DatabaseFailure('Database Failure')));
       when(mockGetWatchListTvStatus.execute(testTvDetail.id))
           .thenAnswer((_) async => false);
       return tvWatchlistBloc;
     },
-    act: (bloc) => bloc.add(SaveTvWatchlist(testTvDetail)),
+    act: (bloc) => bloc.add(const SaveTvWatchlist(testTvDetail)),
     wait: const Duration(milliseconds: 500),
     expect: () => <TvState>[
       TvLoading(),
@@ -157,12 +157,12 @@ void main() {
     'should emit [Loading, Error] when remove from watchlist is unsuccessful',
     build: () {
       when(mockRemoveWatchlistTv.execute(testTvDetail))
-          .thenAnswer((_) async => Left(DatabaseFailure('Database Failure')));
+          .thenAnswer((_) async => const Left(DatabaseFailure('Database Failure')));
       when(mockGetWatchListTvStatus.execute(testTvDetail.id))
           .thenAnswer((_) async => true);
       return tvWatchlistBloc;
     },
-    act: (bloc) => bloc.add(RemoveTvWatchlist(testTvDetail)),
+    act: (bloc) => bloc.add(const RemoveTvWatchlist(testTvDetail)),
     wait: const Duration(milliseconds: 500),
     expect: () => <TvState>[
       TvLoading(),

@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 
 class CreatedByModel extends Equatable {
-  CreatedByModel({
+  const CreatedByModel({
     required this.id,
     required this.creditId,
     required this.name,
