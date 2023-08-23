@@ -49,7 +49,7 @@ void main() {
     'should emit [Loading, Error] when data is gotten unsuccessfully',
     build: () {
       when(mockGetNowPlayingTv.execute())
-          .thenAnswer((_) async => Left(ServerFailure('Server Failure')));
+          .thenAnswer((_) async => const Left(ServerFailure('Server Failure')));
       return onTheAirBloc;
     },
     act: (bloc) => bloc.add(OnTheAir()),

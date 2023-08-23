@@ -45,7 +45,7 @@ void main() {
     'should emit [Loading, Error] when data is gotten unsuccessfully',
     build: () {
       when(mockGetPopularTv.execute())
-          .thenAnswer((_) async => Left(ServerFailure('Server Failure')));
+          .thenAnswer((_) async => const Left(ServerFailure('Server Failure')));
       return popularTvBloc;
     },
     act: (bloc) => bloc.add(PopularTv()),

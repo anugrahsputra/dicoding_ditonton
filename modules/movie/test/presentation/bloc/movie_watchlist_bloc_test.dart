@@ -64,7 +64,7 @@ void main() {
     'should emit [Loading, Error] when data is gotten unsuccessfully.',
     build: () {
       when(mockGetWatchlistMovies.execute())
-          .thenAnswer((_) async => Left(ServerFailure('Server Failure')));
+          .thenAnswer((_) async => const Left(ServerFailure('Server Failure')));
       return movieWatchlistBloc;
     },
     act: (bloc) => bloc.add(WatchlistMovie()),
@@ -104,7 +104,7 @@ void main() {
           .thenAnswer((_) async => true);
       return movieWatchlistBloc;
     },
-    act: (bloc) => bloc.add(SaveWatchlistMovie(testMovieDetail)),
+    act: (bloc) => bloc.add(const SaveWatchlistMovie(testMovieDetail)),
     wait: const Duration(milliseconds: 500),
     expect: () => <MovieState>[
       MovieLoading(),
@@ -125,7 +125,7 @@ void main() {
           .thenAnswer((_) async => false);
       return movieWatchlistBloc;
     },
-    act: (bloc) => bloc.add(RemoveWatchlistMovie(testMovieDetail)),
+    act: (bloc) => bloc.add(const RemoveWatchlistMovie(testMovieDetail)),
     wait: const Duration(milliseconds: 500),
     expect: () => <MovieState>[
       MovieLoading(),
@@ -141,12 +141,12 @@ void main() {
     'should emit [Loading, Error] when add watchlist is unsuccessful',
     build: () {
       when(mockSaveWatchlist.execute(testMovieDetail))
-          .thenAnswer((_) async => Left(DatabaseFailure('Database Failure')));
+          .thenAnswer((_) async => const Left(DatabaseFailure('Database Failure')));
       when(mockGetWatchListStatus.execute(testMovieDetail.id))
           .thenAnswer((_) async => false);
       return movieWatchlistBloc;
     },
-    act: (bloc) => bloc.add(SaveWatchlistMovie(testMovieDetail)),
+    act: (bloc) => bloc.add(const SaveWatchlistMovie(testMovieDetail)),
     wait: const Duration(milliseconds: 500),
     expect: () => <MovieState>[
       MovieLoading(),
@@ -161,12 +161,12 @@ void main() {
     'should emit [Loading, Error] when remove watchlist is unsuccessful',
     build: () {
       when(mockRemoveWatchlist.execute(testMovieDetail))
-          .thenAnswer((_) async => Left(DatabaseFailure('Database Failure')));
+          .thenAnswer((_) async => const Left(DatabaseFailure('Database Failure')));
       when(mockGetWatchListStatus.execute(testMovieDetail.id))
           .thenAnswer((_) async => true);
       return movieWatchlistBloc;
     },
-    act: (bloc) => bloc.add(RemoveWatchlistMovie(testMovieDetail)),
+    act: (bloc) => bloc.add(const RemoveWatchlistMovie(testMovieDetail)),
     wait: const Duration(milliseconds: 500),
     expect: () => <MovieState>[
       MovieLoading(),

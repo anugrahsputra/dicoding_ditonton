@@ -56,7 +56,7 @@ void main() {
       'Watchlist button should display add icon when movie not added to watchlist',
       (WidgetTester tester) async {
     when(() => mockMovieDetailBloc.state)
-        .thenReturn(MovieDetailHasData(testMovieDetail));
+        .thenReturn(const MovieDetailHasData(testMovieDetail));
     when(() => mockMovieWatchlistBloc.state)
         .thenReturn(const MovieWatchlistStatus(false));
     when(() => mockMovieRecommendationsBloc.state)
@@ -73,7 +73,7 @@ void main() {
       'Watchlist button should display check icon when movie not added to watchlist',
       (WidgetTester tester) async {
     when(() => mockMovieDetailBloc.state)
-        .thenReturn(MovieDetailHasData(testMovieDetail));
+        .thenReturn(const MovieDetailHasData(testMovieDetail));
     when(() => mockMovieWatchlistBloc.state)
         .thenReturn(const MovieWatchlistStatus(true));
     when(() => mockMovieRecommendationsBloc.state)
@@ -90,7 +90,7 @@ void main() {
       'Watchlist button should display Snackbar when added to watchlist',
       (WidgetTester tester) async {
     when(() => mockMovieDetailBloc.state)
-        .thenReturn(MovieDetailHasData(testMovieDetail));
+        .thenReturn(const MovieDetailHasData(testMovieDetail));
     when(() => mockMovieRecommendationsBloc.state)
         .thenReturn(MovieListHasData(testMovieList));
     when(() => mockMovieWatchlistBloc.state)
@@ -117,7 +117,7 @@ void main() {
       'Watchlist button should display AlertDialog when add to watchlist failed',
       (WidgetTester tester) async {
     when(() => mockMovieDetailBloc.state)
-        .thenReturn(MovieDetailHasData(testMovieDetail));
+        .thenReturn(const MovieDetailHasData(testMovieDetail));
     when(() => mockMovieRecommendationsBloc.state)
         .thenReturn(MovieListHasData(testMovieList));
     when(() => mockMovieWatchlistBloc.state)

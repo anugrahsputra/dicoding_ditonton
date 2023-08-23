@@ -20,9 +20,9 @@ final testTv = Tv(
 
 final testTvList = [testTv];
 
-final testTvDetail = TvDetail(
+const testTvDetail = TvDetail(
   backdropPath: "backdropPath",
-  lastEpisodeToAir: const LastEpisodeToAir(
+  lastEpisodeToAir: LastEpisodeToAir(
     airDate: "airDate",
     episodeNumber: 1,
     id: 1,
@@ -34,16 +34,16 @@ final testTvDetail = TvDetail(
     voteCount: 1,
   ),
   name: "name",
-  episodeRunTime: const [1],
+  episodeRunTime: [1],
   firstAirDate: "firstAirDate",
   nextEpisodeToAir: 1,
   numberOfEpisodes: 1,
   numberOfSeasons: 1,
-  originCountry: const ["originCountry"],
+  originCountry: ["originCountry"],
   genres: [
     Genre(id: 1, name: "name"),
   ],
-  seasons: const [
+  seasons: [
     Season(
         airDate: "airDate",
         episodeCount: 1,
